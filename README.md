@@ -73,16 +73,15 @@ S 0 1 0 0
 
 Clone o repositório:
 ```bash
-    git clone https://github.com/seuusuario/pathfinder-a-star.git
-    cd pathfinder-a-star
+    git clone https://github.com/Gaburieru35/trabalho_em_grupo_1_FPAA.git
 ```
 
 Execute o código:
 
 ```bash
-python pathfinder.py
+python main.py
 ```
-Você pode editar a matriz diretamente no arquivo pathfinder.py para testar diferentes labirintos.
+Você pode editar a matriz diretamente no arquivo main.py para testar diferentes labirintos.
 
 ## ⚠️ Requisitos
 

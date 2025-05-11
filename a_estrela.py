@@ -10,7 +10,7 @@ def a_estrela(matriz, inicio, fim):
     custo_ateagora = {inicio: 0}
 
     while fila:
-        , atual = heapq.heappop(fila)
+        custo, atual = heapq.heappop(fila)
 
         if atual == fim:
             caminho = []
@@ -25,9 +25,9 @@ def a_estrela(matriz, inicio, fim):
             vizinho = (atual[0] + dx, atual[1] + dy)
             x, y = vizinho
             if 0 <= x < linhas and 0 <= y < colunas and matriz[x][y] != 1:
-                novo_custo = custo_ate_agora[atual] + 1
-                if vizinho not in custo_ate_agora or novo_custo < custo_ate_agora[vizinho]:
-                    custo_ate_agora[vizinho] = novo_custo
+                novo_custo = custo_ateagora[atual] + 1
+                if vizinho not in custo_ateagora or novo_custo < custo_ateagora[vizinho]:
+                    custo_ateagora[vizinho] = novo_custo
                     prioridade = novo_custo + heuristica(vizinho, fim)
                     heapq.heappush(fila, (prioridade, vizinho))
                     veio_de[vizinho] = atual
